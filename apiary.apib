@@ -1,0 +1,838 @@
+FORMAT: 1A
+
+
+ 
+
+# SmartNews API
+SmartNews API
+
+# Group UserActions
+
+# User Register [/user/register/{user}/{password}/{selectedChannels}]
+SmartNews API entry point.
+
+Desc
+
+## Register User [POST]
+
++ Request
+
+    + Body
+
+            {
+                "user":"xperiments",
+                "password":"viernes13",
+                "selectedChannels":[1,2,3]
+            }
+            
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                "success":true
+            }            
+
+# User SingIn [/user/singIn]
+SmartNews API entry point.
+
+Desc
+
+## Sing In User [POST]
+
++ Request
+
+    + Body
+
+            {
+                "user":"xperiments",
+                "password":"viernes13"
+            }
+            
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                "success":true,
+                "selectedChannels":[1,2,3]
+            }
+
+# User Update [/user/update]
+SmartNews API entry point.
+
+Desc
+
+## Update User [POST]
+
++ Request
+
+    + Body
+
+            {
+                "user":"xperiments",
+                "password":"viernes13",
+                "selectedChannels":[1,2,3]
+            }
+            
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                "success":true
+            }
+
+
+# Group ChannelData
+
+# Channels GetChannels [/channels/channels]
+SmartNews API entry point.
+
+Desc
+
+## GetChannels [GET]
+
++ Response 200 (application/json;charset=utf-8;)
+
+    + Body
+
+            {
+                "channels":
+                {
+                    "channel": [
+                    {
+                        "default": "true",
+                        "name": "Internacional",
+                        "uid": "Internacional_uid",
+                        "link": "externalResources/headlines_internacional.xml",
+                        "type": "CAT_GEN"
+                    },
+                    {
+                        "default": "true",
+                        "name": "Nacional",
+                        "uid": "Nacional_uid",
+                        "link": "externalResources/headlines_nacional.xml",
+                        "type": "CAT_GEN"
+                    },
+                    {
+                        "default": "true",
+                        "name": "Política",
+                        "uid": "Política_uid",
+                        "link": "externalResources/headlines_politica.xml",
+                        "type": "CAT_GEN"
+                    },
+                    {
+                        "default": "true",
+                        "name": "Economía",
+                        "uid": "Economía_uid",
+                        "link": "externalResources/headlines_economia.xml",
+                        "type": "CAT_GEN"
+                    },
+                    {
+                        "default": "true",
+                        "name": "Deportes",
+                        "uid": "Deportes_uid",
+                        "link": "externalResources/headlines_deportes.xml",
+                        "type": "CAT_GEN"
+                    },
+                    {
+                        "default": "true",
+                        "name": "Sociedad",
+                        "uid": "Sociedad_uid",
+                        "link": "externalResources/headlines_sociedad.xml",
+                        "type": "CAT_GEN"
+                    },
+                    {
+                        "default": "true",
+                        "name": "Cultura",
+                        "uid": "Cultura_uid",
+                        "link": "externalResources/headlines_cultura.xml",
+                        "type": "CAT_GEN"
+                    },
+                    {
+                        "default": "false",
+                        "name": "Arte",
+                        "uid": "Arte_uid",
+                        "link": "externalResources/headlines.xml?channel=arte",
+                        "type": "CAT_CUS"
+                    },
+                    {
+                        "default": "false",
+                        "name": "Atletismo",
+                        "uid": "Atletismo_uid",
+                        "link": "externalResources/headlines.xml?channel=atletismo",
+                        "type": "CAT_CUS"
+                    },
+                    {
+                        "default": "false",
+                        "name": "Automoción",
+                        "uid": "Automoción_uid",
+                        "link": "externalResources/headlines.xml?channel=automoción",
+                        "type": "CAT_CUS"
+                    },
+                    {
+                        "default": "false",
+                        "name": "Bádminton",
+                        "uid": "Bádminton_uid",
+                        "link": "externalResources/headlines.xml?channel=bádminton",
+                        "type": "CAT_CUS"
+                    },
+                    {
+                        "default": "false",
+                        "name": "Baloncesto",
+                        "uid": "Baloncesto_uid",
+                        "link": "externalResources/headlines.xml?channel=baloncesto",
+                        "type": "CAT_CUS"
+                    },
+                    {
+                        "default": "false",
+                        "name": "Balonmano",
+                        "uid": "Balonmano_uid",
+                        "link": "externalResources/headlines.xml?channel=balonmano",
+                        "type": "CAT_CUS"
+                    },
+                    {
+                        "default": "false",
+                        "name": "Béisbol",
+                        "uid": "Béisbol_uid",
+                        "link": "externalResources/headlines.xml?channel=béisbol",
+                        "type": "CAT_CUS"
+                    },
+                    {
+                        "default": "false",
+                        "name": "Boxeo",
+                        "uid": "Boxeo_uid",
+                        "link": "externalResources/headlines.xml?channel=boxeo",
+                        "type": "CAT_CUS"
+                    },
+                    {
+                        "default": "false",
+                        "name": "Casa_y_jardín",
+                        "uid": "Casa_y_jardín_uid",
+                        "link": "externalResources/headlines.xml?channel=casa_y_jardín",
+                        "type": "CAT_CUS"
+                    },
+                    {
+                        "default": "false",
+                        "name": "Ciclismo",
+                        "uid": "Ciclismo_uid",
+                        "link": "externalResources/headlines.xml?channel=ciclismo",
+                        "type": "CAT_CUS"
+                    },
+                    {
+                        "default": "false",
+                        "name": "Ciencia",
+                        "uid": "Ciencia_uid",
+                        "link": "externalResources/headlines.xml?channel=ciencia",
+                        "type": "CAT_CUS"
+                    },
+                    {
+                        "default": "false",
+                        "name": "Cricket",
+                        "uid": "Cricket_uid",
+                        "link": "externalResources/headlines.xml?channel=cricket",
+                        "type": "CAT_CUS"
+                    },
+                    {
+                        "default": "false",
+                        "name": "Educación",
+                        "uid": "Educación_uid",
+                        "link": "externalResources/headlines.xml?channel=educación",
+                        "type": "CAT_CUS"
+                    },
+                    {
+                        "default": "false",
+                        "name": "Empresa",
+                        "uid": "Empresa_uid",
+                        "link": "externalResources/headlines.xml?channel=empresa",
+                        "type": "CAT_CUS"
+                    },
+                    {
+                        "default": "false",
+                        "name": "Espacio",
+                        "uid": "Espacio_uid",
+                        "link": "externalResources/headlines.xml?channel=espacio",
+                        "type": "CAT_CUS"
+                    }]
+                }
+            }
+
+
+# Channels GetChannels [/channels/channels/xml]
+SmartNews API entry point.
+
+Desc
+
+## GetChannels [GET]
+
++ Response 200 (application/json;charset=utf-8;)
+
+    + Body
+
+            <?xml version="1.0" encoding="utf-8"?>
+            <channels>
+                <channel>
+                    <default>true</default>
+                    <name>Internacional</name>
+                    <uid>Internacional_uid</uid>
+                    <link>externalResources/headlines_internacional.xml</link>
+                    <type>CAT_GEN</type>
+                </channel>
+                <channel>
+                    <default>true</default>
+                    <name>Nacional</name>
+                    <uid>Nacional_uid</uid>
+                    <link>externalResources/headlines_nacional.xml</link>
+                    <type>CAT_GEN</type>
+            
+                </channel>
+                <channel>
+                    <default>true</default>
+                    <name>Política</name>
+                    <uid>Política_uid</uid>
+                    <link>externalResources/headlines_politica.xml</link>
+                    <type>CAT_GEN</type>
+            
+                </channel>
+                <channel>
+                    <default>true</default>
+                    <name>Economía</name>
+                    <uid>Economía_uid</uid>
+                    <link>externalResources/headlines_economia.xml</link>
+                    <type>CAT_GEN</type>
+                </channel>
+                <channel>
+                    <default>true</default>
+                    <name>Deportes</name>
+                    <uid>Deportes_uid</uid>
+                    <link>externalResources/headlines_deportes.xml</link>
+                    <type>CAT_GEN</type>
+            
+                </channel>
+                <channel>
+                    <default>true</default>
+                    <name>Sociedad</name>
+                    <uid>Sociedad_uid</uid>
+                    <link>externalResources/headlines_sociedad.xml</link>
+                    <type>CAT_GEN</type>
+                </channel>
+                <channel>
+                    <default>true</default>
+                    <name>Cultura</name>
+                    <uid>Cultura_uid</uid>
+                    <link>externalResources/headlines_cultura.xml</link>
+                    <type>CAT_GEN</type>
+                </channel>
+                <channel>
+                    <default>false</default>
+                    <name>Arte</name>
+                    <uid>Arte_uid</uid>
+                    <link>externalResources/headlines.xml?channel=arte</link>
+                    <type>CAT_CUS</type>
+                </channel>
+                <channel>
+                    <default>false</default>
+                    <name>Atletismo</name>
+                    <uid>Atletismo_uid</uid>
+                    <link>externalResources/headlines.xml?channel=atletismo</link>
+                    <type>CAT_CUS</type>
+                </channel>
+                <channel>
+                    <default>false</default>
+                    <name>Automoción</name>
+                    <uid>Automoción_uid</uid>
+                    <link>externalResources/headlines.xml?channel=automoción</link>
+                    <type>CAT_CUS</type>
+                </channel>
+                <channel>
+                    <default>false</default>
+                    <name>Bádminton</name>
+                    <uid>Bádminton_uid</uid>
+                    <link>externalResources/headlines.xml?channel=bádminton</link>
+                    <type>CAT_CUS</type>
+                </channel>
+                <channel>
+                    <default>false</default>
+                    <name>Baloncesto</name>
+                    <uid>Baloncesto_uid</uid>
+                    <link>externalResources/headlines.xml?channel=baloncesto</link>
+                    <type>CAT_CUS</type>
+                </channel>
+                <channel>
+                    <default>false</default>
+                    <name>Balonmano</name>
+                    <uid>Balonmano_uid</uid>
+                    <link>externalResources/headlines.xml?channel=balonmano</link>
+                    <type>CAT_CUS</type>
+                </channel>
+                <channel>
+                    <default>false</default>
+                    <name>Béisbol</name>
+                    <uid>Béisbol_uid</uid>
+                    <link>externalResources/headlines.xml?channel=béisbol</link>
+                    <type>CAT_CUS</type>
+                </channel>
+                <channel>
+                    <default>false</default>
+                    <name>Boxeo</name>
+                    <uid>Boxeo_uid</uid>
+                    <link>externalResources/headlines.xml?channel=boxeo</link>
+                    <type>CAT_CUS</type>
+                </channel>
+                <channel>
+                    <default>false</default>
+                    <name>Casa_y_jardín</name>
+                    <uid>Casa_y_jardín_uid</uid>
+                    <link>externalResources/headlines.xml?channel=casa_y_jardín</link>
+                    <type>CAT_CUS</type>
+                </channel>
+                <channel>
+                    <default>false</default>
+                    <name>Ciclismo</name>
+                    <uid>Ciclismo_uid</uid>
+                    <link>externalResources/headlines.xml?channel=ciclismo</link>
+                    <type>CAT_CUS</type>
+                </channel>
+                <channel>
+                    <default>false</default>
+                    <name>Ciencia</name>
+                    <uid>Ciencia_uid</uid>
+                    <link>externalResources/headlines.xml?channel=ciencia</link>
+                    <type>CAT_CUS</type>
+                </channel>
+                <channel>
+                    <default>false</default>
+                    <name>Cricket</name>
+                    <uid>Cricket_uid</uid>
+                    <link>externalResources/headlines.xml?channel=cricket</link>
+                    <type>CAT_CUS</type>
+                </channel>
+                <channel>
+                    <default>false</default>
+                    <name>Educación</name>
+                    <uid>Educación_uid</uid>
+                    <link>externalResources/headlines.xml?channel=educación</link>
+                    <type>CAT_CUS</type>
+                </channel>
+                <channel>
+                    <default>false</default>
+                    <name>Empresa</name>
+                    <uid>Empresa_uid</uid>
+                    <link>externalResources/headlines.xml?channel=empresa</link>
+                    <type>CAT_CUS</type>
+                </channel>
+                <channel>
+                    <default>false</default>
+                    <name>Espacio</name>
+                    <uid>Espacio_uid</uid>
+                    <link>externalResources/headlines.xml?channel=espacio</link>
+                    <type>CAT_CUS</type>
+                </channel>
+            </channels>
+
+# Channel [/channels/channel/{id}]
+SmartNews API entry point.
+
+Desc
+
++ Model (application/json;charset=utf-8;)
+
+    + Body
+
+            {
+                "rss":
+                {
+                    "channel":
+                    {
+                        "title": "Cultura",
+                        "link": "",
+                        "description": "Noticias locales de Barcelona",
+                        "item": [
+                        {
+                            "title":
+                            {
+                                "$name": "juan",
+                                "__text": "Breaking bad"
+                            },
+                            "description": "Galería de fotografías de la serie televisiva",
+                            "thumbnails":
+                            {
+                                "$url": "http://www.emmytvlegends.org/files/show-thumbs/breakingbadopening.jpg",
+                                "$type": "image/jpg",
+                                "$$NS": "media"
+                            },
+                            "content": [
+                            {
+                                "title":
+                                {
+                                    "$$NS": "media",
+                                    "__text": "Portada del DVD"
+                                },
+                                "$url": "http://www.visionradio.com.mx/wp-content/uploads/2012/07/Breaking-Bad.jpg",
+                                "$type": "images/jpg",
+                                "$$NS": "media"
+                            },
+                            {
+                                "$url": "http://a69.g.akamai.net/n/69/10688/v1/img5.allocine.fr/acmedia/medias/nmedia/18/91/07/83/20128335.jpg",
+                                "$type": "images/jpg",
+                                "$$NS": "media"
+                            },
+                            {
+                                "$url": "http://www.apaixonadosporseries.com.br/wp-content/arquivos/2012/09/BreakingBad5x08.jpg",
+                                "$type": "images/jpg",
+                                "$$NS": "media"
+                            },
+                            {
+                                "$url": "http://i.imgur.com/cvIwm.jpg",
+                                "$type": "images/jpg",
+                                "$$NS": "media"
+                            }],
+                            "smartnews":
+                            {
+                                "$slideTime": "3",
+                                "$relevance": "3",
+                                "$$NS": "act"
+                            }
+                        },
+                        {
+                            "title": "GnR Memorabilia",
+                            "description": "Algunas fotografías del grupo de Estados Unidos, acompañadas por un fragmento de una de sus canciones más famosas",
+                            "thumbnails":
+                            {
+                                "$url": "http://d3na4zxidw1hr4.cloudfront.net/site_media/uploads/images/post/g/guns-n-roses/axl-rose-pulls-out-rock-and-roll-hall-ceremony_top_jpeg_250x168_q85.jpg",
+                                "$type": "image/jpg",
+                                "$$NS": "media"
+                            },
+                            "content": [
+                            {
+                                "$url": "videos/gnrSongShort.mp3",
+                                "$type": "audio/mp3",
+                                "$duration": "30",
+                                "$$NS": "media"
+                            },
+                            {
+                                "title":
+                                {
+                                    "$$NS": "media",
+                                    "__text": "Logotipo"
+                                },
+                                "$url": "http://www.tubanda.com.ve/Archivos/Notas/logo_guns.jpg",
+                                "$type": "images/jpg",
+                                "$$NS": "media"
+                            },
+                            {
+                                "title":
+                                {
+                                    "$$NS": "media",
+                                    "__text": "En Argentina"
+                                },
+                                "$url": "http://rockenlasvenas.com/wp-content/uploads/2011/07/Entradas-Guns-N-Roses-en-Argentina-20111.jpg",
+                                "$type": "images/jpg",
+                                "$$NS": "media"
+                            },
+                            {
+                                "title":
+                                {
+                                    "$$NS": "media",
+                                    "__text": "La banda completa haciendo sesión de fotos después de un concierto y saludar a sus fans"
+                                },
+                                "$url": "http://fensepost.com/main/images/bands/g/gunsnroses.jpg",
+                                "$type": "images/jpg",
+                                "$$NS": "media"
+                            },
+                            {
+                                "title":
+                                {
+                                    "$$NS": "media",
+                                    "__text": "Axel Rose en los 80"
+                                },
+                                "$url": "http://24.media.tumblr.com/tumblr_lk0alrrNg61qhwgkeo1_500.jpg",
+                                "$type": "images/jpg",
+                                "$$NS": "media"
+                            }],
+                            "smartnews":
+                            {
+                                "$captionClass": "yellowThing",
+                                "$relevance": "3",
+                                "$$NS": "act"
+                            }
+                        },
+                        {
+                            "title": "Notas tecnológicas en inglés",
+                            "description": "Los encabezados de los más relevante en tecnología",
+                            "thumbnails":
+                            {
+                                "$url": "http://siteresources.worldbank.org/INTLACINSPANISH/Images/aplicaciones_2.jpg",
+                                "$type": "image/jpg",
+                                "$$NS": "media"
+                            },
+                            "content": [
+                            {
+                                "title":
+                                {
+                                    "$$NS": "media",
+                                    "__text": "Humble iodized salt gave us a 10-year IQ boost, say researchers"
+                                },
+                                "$$NS": "media"
+                            },
+                            {
+                                "title":
+                                {
+                                    "$$NS": "media",
+                                    "__text": "Nike+ Running iOS update adds social challenges, trash talk"
+                                },
+                                "$$NS": "media"
+                            },
+                            {
+                                "title":
+                                {
+                                    "$$NS": "media",
+                                    "__text": "Is it affordable to bet for energetic self sufficiency at home?"
+                                },
+                                "$$NS": "media"
+                            },
+                            {
+                                "title":
+                                {
+                                    "$$NS": "media",
+                                    "__text": "Sony said to take on 'Fast n' Furious' with 'Gran Turismo' movie adaptation"
+                                },
+                                "$$NS": "media"
+                            }],
+                            "smartnews":
+                            {
+                                "$captionClass": "breakingNews",
+                                "$relevance": "4",
+                                "$$NS": "act"
+                            }
+                        },
+                        {
+                            "title": "Joves en fragilitat social fan d'informadors a les platges",
+                            "description": "Aquest estiu les platges de Barcelona comptaran amb quatre informadors ambientals més. Són joves d'entre 16 i 18 anys que provenen de la Fundació El Llindar. Aquesta entitat ha signat un conveni amb l'Ajutament i amb la Fundació Abertis per donar-los feina. Per a alguns, serà el seu primer contacte amb el món laboral.",
+                            "thumbnails":
+                            {
+                                "$url": "videos/jovesplatja.jpg",
+                                "$type": "image/jpg",
+                                "$$NS": "media"
+                            },
+                            "community":
+                            {
+                                "statistics":
+                                {
+                                    "$twitter": "134",
+                                    "$$NS": "media"
+                                },
+                                "$$NS": "media"
+                            },
+                            "content":
+                            {
+                                "$url": "videos/jovesplatja.mp4",
+                                "$type": "video/mp4",
+                                "$duration": "79",
+                                "$expression": "full",
+                                "$$NS": "media"
+                            },
+                            "smartnews":
+                            {
+                                "$captionClass": "breakingNews",
+                                "$relevance": "4",
+                                "$$NS": "act"
+                            }
+                        },
+                        {
+                            "title": "Festa per donar la benvinguda al Grec",
+                            "description": "Se enfrentaron en el ring por el corazón de Flor. ¿Quién habrá ganado? Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.",
+                            "thumbnails":
+                            {
+                                "$url": "videos/festagrec.jpg",
+                                "$$NS": "media"
+                            },
+                            "community":
+                            {
+                                "statistics":
+                                {
+                                    "$facebook": "233",
+                                    "$twitter": "432",
+                                    "$$NS": "media"
+                                },
+                                "tags":
+                                {
+                                    "$$NS": "media",
+                                    "__text": "música, festivales"
+                                },
+                                "$$NS": "media"
+                            },
+                            "content":
+                            {
+                                "$url": "videos/festagrec.mp4",
+                                "$type": "video/mp4",
+                                "$duration": "77",
+                                "$expression": "full",
+                                "$$NS": "media"
+                            },
+                            "smartnews":
+                            {
+                                "$captionClass": "breakingNews",
+                                "$relevance": "4",
+                                "$$NS": "act"
+                            }
+                        },
+                        {
+                            "title": "Un aparador dels invents i la creativitat",
+                            "description": "Aquest dissabte s’ha fet la primera edició del Mini Maker Faire, una fira on creadors, inventors i emprenedors són els protagonistes. La iniciativa serveix perquè mostrin els seus singulars projectes, com roba amb llums o un robot que fa còctels, però també perquè comparteixin coneixements entre ells i amb el públic.",
+                            "thumbnails":
+                            {
+                                "$url": "videos/inventor.jpg",
+                                "$$NS": "media"
+                            },
+                            "community":
+                            {
+                                "statistics":
+                                {
+                                    "$facebook": "233",
+                                    "$twitter": "432",
+                                    "$$NS": "media"
+                                },
+                                "tags":
+                                {
+                                    "$$NS": "media",
+                                    "__text": "técnologia"
+                                },
+                                "$$NS": "media"
+                            },
+                            "content":
+                            {
+                                "$url": "videos/inventor.mp4",
+                                "$type": "video/mp4",
+                                "$duration": "126",
+                                "$expression": "full",
+                                "$$NS": "media"
+                            },
+                            "smartnews":
+                            {
+                                "$captionClass": "breakingNews",
+                                "$relevance": "4",
+                                "$$NS": "act"
+                            }
+                        },
+                        {
+                            "title": "Concert històric pel dret de Catalunya a decidir el seu futur",
+                            "description": "Més de 90.000 persones van omplir dissabte el Camp Nou de gom a gom per gaudir de la música, la poesia i els missatges a favor de la llibertat i l'autodeterminació de Catalunya. El Concert per la Llibertat es va allargar finalment sis hores, dues més del previst. Entre els moments més emotius de la nit, el mosaic a les graderies amb el missatge Freedom Catalonia 2014, el tres de nou amb folre dels Castellers de Vilafranca o el retorn als escenaris de Lluís Llach. La seva música va ser la protagonista de la darrera part del concert.",
+                            "thumbnails":
+                            {
+                                "$url": "videos/concert.jpg",
+                                "$$NS": "media"
+                            },
+                            "community":
+                            {
+                                "statistics":
+                                {
+                                    "$facebook": "233",
+                                    "$twitter": "432",
+                                    "$$NS": "media"
+                                },
+                                "tags":
+                                {
+                                    "$$NS": "media",
+                                    "__text": "música"
+                                },
+                                "$$NS": "media"
+                            },
+                            "content":
+                            {
+                                "$url": "videos/concert.mp4",
+                                "$type": "video/mp4",
+                                "$duration": "202",
+                                "$expression": "full",
+                                "$$NS": "media"
+                            },
+                            "smartnews":
+                            {
+                                "$captionClass": "breakingNews",
+                                "$relevance": "4",
+                                "$$NS": "act"
+                            }
+                        },
+                        {
+                            "title": "Dues germanes, dos esports",
+                            "description": "Al Torneig Internacional de futbol aleví i infantil, organitzat pel Sant Gabriel, hi vam trobar les germanes Caballero. La Naiara era a la gespa de l'estadi jugant amb el Barça femení, mentre que la Noelia s'estava a la grada mirant les evolucions de la seva germana.",
+                            "thumbnails":
+                            {
+                                "$url": "videos/besones.jpg",
+                                "$$NS": "media"
+                            },
+                            "community":
+                            {
+                                "statistics":
+                                {
+                                    "$facebook": "233",
+                                    "$twitter": "432",
+                                    "$$NS": "media"
+                                },
+                                "tags":
+                                {
+                                    "$$NS": "media",
+                                    "__text": "deportes"
+                                },
+                                "$$NS": "media"
+                            },
+                            "content":
+                            {
+                                "$url": "videos/besones.mp4",
+                                "$type": "video/mp4",
+                                "$duration": "139",
+                                "$expression": "full",
+                                "$$NS": "media"
+                            },
+                            "smartnews":
+                            {
+                                "$captionClass": "breakingNews",
+                                "$relevance": "4",
+                                "$$NS": "act"
+                            }
+                        },
+                        {
+                            "title": "Trias vol carrils 30 en carrers molt transitats perquè hi circulin les bicis",
+                            "description": "Segons l'alcalde, Xavier Trias, el futur de la bicicleta a la ciutat no és construir més carrils específics per a aquest vehicle, sinó fer-lo baixar a la calçada, fins i tot als carrers més transitats. A la via Laietana o al carrer de Balmes, l'Ajuntament aposta per crear-hi carrils 30 que facin possible la circulació de les bicicletes per aquestes vies. El pla municipal per millorar la xarxa ciclista de la ciutat preveu també ampliar alguns carrils-bici, construir més parades d'aparcament i mesures per garantir la seguretat en les cruïlles amb més accidents.",
+                            "thumbnails":
+                            {
+                                "$url": "videos/problemes.jpg",
+                                "$type": "image/jpg",
+                                "$$NS": "media"
+                            },
+                            "content":
+                            {
+                                "$url": "videos/problemes.mp4",
+                                "$type": "video/mp4",
+                                "$duration": "60",
+                                "$expression": "full",
+                                "$$NS": "media"
+                            },
+                            "smartnews":
+                            {
+                                "$captionClass": "breakingNews",
+                                "$relevance": "4",
+                                "$$NS": "act"
+                            }
+                        }]
+                    },
+                    "$xmlns:act": "http://www.agilecontents.com/",
+                    "$xmlns:media": "http://search.yahoo.com/mrss/",
+                    "$xmlns:dcterms": "http://purl.org/dc/terms/",
+                    "$version": "2.0"
+                }
+            }
+
+## GetChannel [GET]
++ Parameters
+    + id (string) ... ID of the channel to load.
+    
++ Response 200 (application/json;charset=utf-8;)
+
+    [Channel][]            
+            
+            
+            
+            
+          
